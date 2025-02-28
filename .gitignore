@@ -1,0 +1,3 @@
+# Ignorar los archivos extra generados por vpp
+*.vpp.lck
+vpp.back_*

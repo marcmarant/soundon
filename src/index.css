@@ -57,7 +57,9 @@ button {
 }
 
 hr {
-  width: 200px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 300px;
 }
 
 .login_sec {
@@ -68,12 +70,22 @@ hr {
   width: 100%;
 }
 
+.login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .login div {
   display: flex;
   flex-direction: column;
 }
 
-.email_input {
+.email_input, .password_input {
   width: 300px;
 }
 
+.login button {
+  margin-top: 20px;
+}

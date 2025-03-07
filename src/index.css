@@ -1,7 +1,9 @@
 :root {
   --background-color: #303030;
   --text-color: #f4f4f4;
+  --text-color-dark: #343434;
   --primary-color: #e0122f;
+  --primary-color-dark: #a00f23;
   --secondary-color: #429e39;
   --border-radius: 10px;
 }
@@ -62,30 +64,38 @@ input {
   font-size: large;
   padding-left: 5px;
   padding-right: 5px;
+  outline: none;
 }
 
 button {
   background-color: var(--primary-color);
-  border: solid 2px black;
+  border: solid 3px black;
   border-radius: var(--border-radius);
   padding: 8px 20px;
   color: var(--text-color);
   font-size: large;
   cursor: pointer;
 }
+button:hover {
+  background-color: var(--primary-color-dark);
+}
+
+textarea {
+  border-radius: var(--border-radius);
+  background-color: white;
+  color: var(--text-color-dark);
+  border: solid 3px black;
+  font-size: large;
+  padding-left: 5px;
+  padding-right: 5px;
+  outline: none;
+  resize: none;
+}
 
 hr {
   margin-top: 20px;
   margin-bottom: 20px;
   width: 300px;
-}
-
-.login_sec {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
 }
 
 .login {
@@ -106,8 +116,31 @@ hr {
 
 .password_input {
   margin-top: 20px;
+  position: relative;
+}
+
+.password_input input {
+  padding-right: 30px;
+}
+
+.icon_eye_slash {
+  position: absolute;
+  right: 10px;
+  top: 40px;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background-image: url('assets/icons/eye_slash.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  vertical-align: middle;
+  cursor: pointer;
 }
 
 .login button {
   margin-top: 20px;
+}
+
+.login_button, .register_button {
+  width: 200px;
 }

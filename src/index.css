@@ -20,9 +20,14 @@ body {
   background-color: var(--background-color);
   color: var(--text-color);
   display: flex;
+  flex-direction: row;
   justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
 }
 
+/*
 main {
   display: flex;
   flex-direction: row;
@@ -32,6 +37,7 @@ main {
   width: 100%;
   max-width: 1000px;
 }
+*/
 
 main section {
   display: flex;
@@ -52,6 +58,11 @@ h1 {
 h2 {
   font-weight: lighter;
   font-size: x-large;
+}
+
+a {
+  color: var(--text-color);
+  text-decoration: none;
 }
 
 input {

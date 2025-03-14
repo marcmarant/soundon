@@ -1,0 +1,442 @@
+:root {
+    --background-color: #303030;
+    --text-color: #f4f4f4;
+    --primary-color: #e0122f;
+}
+
+body {
+    color: white;
+    padding: 0;
+    margin: 0;
+    min-height: 100vh;
+    overflow: auto;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    background-color: var(--background-color);
+}
+
+.container {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.sidebar {
+    width: 26%;
+    min-width: 90px;
+    left: 0;
+    background-color: var(--background-color);
+    color: white;
+    height: 100%;
+    padding: 0 1rem;
+    position: fixed;
+    transition: width 0.3s ease-in-out;
+    /*border-right: 1.5px solid #444444;*/
+}
+
+.sidebar a {
+    color: white;
+    text-decoration: none;
+}
+
+.sidebar .sidebartop {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-top: 1rem;
+    height: 55px;
+    margin-bottom: 3rem;
+}
+
+.sidebar .logo {
+    width: 50px;
+}
+
+.sidebar .logo img {
+    height: auto;
+    max-width: 50px;
+}
+
+.sidebar nav ul li a img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+.sidebar .actual a .text {
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.sidebar nav ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.sidebar nav ul li {
+    display: block;
+    align-items: center;
+    padding: 1.25rem 0;
+    position: relative;
+    background-color: transparent;
+    transition: background-color 0.25s ease-in-out;
+}
+
+.sidebar nav ul li a {
+    display: block;
+}
+
+.sidebar nav ul li a .text {
+    position: relative;
+    left: 1rem;
+    top: -0.2rem;
+}
+
+.sidebar .account {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+    width: calc(100% - 2rem);
+    position: absolute;
+    bottom: 1rem;
+}
+
+.sidebar .account .logout a img {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.main {
+    margin-left: 27.7%;
+    width: 900px;
+    background-color: #303030;
+    border: 1px solid #444444;
+    border-radius: 10px;
+    overflow: hidden;
+       
+}
+
+.main .header {
+    background-image: url('assets/encabezado.png');
+    background-size: cover;
+    background-position: center;
+    height: 150px;
+}
+
+.main .profile {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    position: relative;
+}
+
+.main .avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-image: url('assets/perfil.jpg');
+    background-size: cover;
+    background-position: center;
+    border: 2px solid white;
+    position: absolute;
+    top: -40px;
+}
+
+.main .edit-button {
+    margin-left: auto;
+    padding: 5px 10px;
+    border: none;
+    background-color: #303030;
+    color: #e0122f;
+    border: 2px solid #e0122f;
+    border-radius: 15px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.main .info {
+    padding: 10px 15px;
+}
+
+.main .bio {
+    color: #f4f4f4;
+}
+
+.main .info .nombreUsuario{
+    color:  #b6b6b6;
+
+}
+
+.main .details span {
+    display: block;
+    color:  #b6b6b6;
+    font-size: 14px;
+}
+
+.main .details .followers span {
+    float: left;
+    margin: 10px;
+}
+
+.clearfix{
+    clear: both;
+}
+
+.main .tabs {
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 1px solid #444444;
+}
+
+.main .tabs button {
+    background: none;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    color: #b6b6b6;
+}
+
+.main .tabs .active {
+    color: #e0122f;
+    border-bottom: 2px solid #e0122f;
+    font-weight: bold;
+}
+
+.main .tabs button:hover {
+    color: var(--primary-color);
+}
+
+.main .contenido{
+    background-color: #303030;
+    margin: 15px;
+    border-radius: 10px;
+}
+
+.main .contenido .music-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #e0122f;
+    border-radius: 8px;
+    height: auto; /* Permite que la altura se ajuste al contenido */
+    padding: 20px;
+    margin-bottom: 20px; /* Añade espacio entre las tarjetas */
+    
+}
+
+
+.main .contenido .infocuenta{
+    height: 50px;
+    width: 100%;
+    background-color: #303030;
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    gap: 20px; 
+
+
+}
+
+
+.main .contenido .avatarMini img{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    border: 1px solid white;
+    position: relative; /* Cambia a relative o elimina esta línea */
+}
+
+.main .contenido .portada {
+    width: 800px;
+    height: 500px;
+    background-image: url('assets/encabezado.png');
+    background-size: cover;
+    background-position: center;
+    border-radius: 3%;
+    border: 1px solid white;
+    position: relative; /* Cambia a relative o elimina esta línea */
+
+}
+
+.main .contenido .actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.main .contenido .play {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+/* prueba*/
+
+.card {
+    display: flex;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #303030;
+    /*box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);*/
+    position: relative;
+    text-align: center;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    margin-bottom: 20px; /* Añade espacio entre las tarjetas */
+    align-items: center; /* Centra horizontalmente */
+}
+
+.card .content {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.profile-circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid white;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.friend-name {
+    font-weight: bold;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.options {
+    font-size: 14px;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.contenedor {
+    width: 700px;
+    height: 700px;
+    position: relative; /* Necesario para posicionar elementos absolutos dentro */
+    overflow: hidden; /* Asegura que cualquier contenido que se desborde no sea visible */
+    margin-bottom: 20px; /* Añade espacio entre las tarjetas */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.controls {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 2;
+}
+
+.control-button {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.control-button img {
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.5)); /* Añade una sombra */
+}
+
+.song-bar {
+    background: rgba(50, 50, 50, 0.85);
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%; /* Asegura que ocupe todo el ancho del contenedor */
+    height: 90px;
+    position: absolute;
+    bottom: 0; /* Alinea con el borde inferior del contenedor */
+    left: 0; /* Alinea con el borde izquierdo del contenedor */
+    z-index: 2;
+    box-sizing: border-box; /* Incluye el padding en el ancho total del song-bar */
+}
+
+.play-button {
+    
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.chip {
+    background-color: var(--primary-color);
+    border-radius: 8px;
+    padding: 5px 10px;
+    align-items: center;
+    color: var(--text-color);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    font-size: 20px;
+    
+}
+
+
+
+
+
+
+
+@media (max-width: 1440px) {
+    .sidebar {
+        width: 15%;
+    }
+    .main {
+        margin-left: 18.2%;
+        width: 900px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .sidebar {
+        width: 10%;
+    }
+    .main {
+        margin-left: 13%;
+        width: 900px;
+    }
+}
+
+@media (max-width: 960px) {
+    .sidebar {
+        width: 90px;
+    }
+    .main {
+        margin-left: 123px;
+        width: 900px;
+    }
+}

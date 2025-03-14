@@ -1,0 +1,375 @@
+:root {
+    --background-color: #303030;
+    --text-color: #f4f4f4;
+    --primary-color: #e0122f;
+}
+
+body {
+    color: white;
+    padding: 0;
+    margin: 0;
+    min-height: 100vh;
+    overflow: auto;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    background-color: var(--background-color);
+}
+
+.container {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.sidebar {
+    width: 26%;
+    min-width: 90px;
+    left: 0;
+    background-color: var(--background-color);
+    color: white;
+    height: 100%;
+    padding: 0 1rem;
+    position: fixed;
+    transition: width 0.3s ease-in-out;
+    /*border-right: 1.5px solid #444444;*/
+}
+
+.sidebar a {
+    color: white;
+    text-decoration: none;
+}
+
+.sidebar .sidebartop {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-top: 1rem;
+    height: 55px;
+    margin-bottom: 3rem;
+}
+
+.sidebar .logo {
+    width: 50px;
+}
+
+.sidebar .logo img {
+    height: auto;
+    max-width: 50px;
+}
+
+.sidebar nav ul li a img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+.sidebar .actual a .text {
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.sidebar nav ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.sidebar nav ul li {
+    display: block;
+    align-items: center;
+    padding: 1.25rem 0;
+    position: relative;
+    background-color: transparent;
+    transition: background-color 0.25s ease-in-out;
+}
+
+.sidebar nav ul li a {
+    display: block;
+}
+
+.sidebar nav ul li a .text {
+    position: relative;
+    left: 1rem;
+    top: -0.2rem;
+}
+
+.sidebar .account {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+    width: calc(100% - 2rem);
+    position: absolute;
+    bottom: 1rem;
+}
+
+.sidebar .account .logout a img {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.main {
+    margin-left: 27.7%;
+    width: 900px;
+    background-color: #303030;
+    border: 1px solid #444444;
+    border-radius: 10px;
+    overflow: hidden;
+       
+}
+
+.main .header {
+    background-image: url('assets/encabezado.png');
+    background-size: cover;
+    background-position: center;
+    height: 150px;
+}
+
+.main .profile {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    position: relative;
+}
+
+.main .avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-image: url('assets/perfil.jpg');
+    background-size: cover;
+    background-position: center;
+    border: 2px solid white;
+    position: absolute;
+    top: -40px;
+}
+
+.main .edit-button {
+    margin-left: auto;
+    padding: 5px 10px;
+    border: none;
+    background-color: #303030;
+    color: #e0122f;
+    border: 2px solid #e0122f;
+    border-radius: 15px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.main .info {
+    padding: 10px 15px;
+}
+
+.main .bio {
+    color: #f4f4f4;
+}
+
+.main .info .nombreUsuario{
+    color:  #b6b6b6;
+
+}
+
+.main .details span {
+    display: block;
+    color:  #b6b6b6;
+    font-size: 14px;
+}
+
+.main .details .followers span {
+    float: left;
+    margin: 10px;
+}
+
+.clearfix{
+    clear: both;
+}
+
+.main .tabs {
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 1px solid #444444;
+}
+
+.main .tabs button {
+    background: none;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    color: #b6b6b6;
+}
+
+.main .tabs .active {
+    color: #e0122f;
+    border-bottom: 2px solid #e0122f;
+    font-weight: bold;
+}
+
+.main .tabs button:hover {
+    color: var(--primary-color);
+}
+
+.main .contenido{
+    background-color: #303030;
+    margin: 15px;
+    border-radius: 10px;
+}
+
+
+.main .calendarContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.main .calendar {
+    width: 600px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    background: #222;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgb(0, 0, 0, 0.3);
+}
+
+.main .calendarInfor {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.main .calendarInfor button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    color: var(--text-color);
+    background: #222;
+}
+
+.main .week {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+}
+
+.main .day {
+    text-align: center;
+    padding: 5px;
+    color: #f4f4f4;
+    font-weight: 500;
+}
+
+.main .dates {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+}
+
+.main .date {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+    margin: auto;
+    font-weight: 600;
+    border-radius: 25%;
+    width: 40px;
+    height: 40px;
+    transition: 0.2s;
+}
+
+.main .date:hover {
+    color: darkred;
+}
+
+.main .marked {
+    background: var(--primary-color);
+    border-radius: 25%;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.main .today {
+    background: #f4f4f4;
+    color: #303030;
+    border-radius: 25%;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.main .chips-container-gender {
+    margin-left: 40px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.main .chip {
+    background-color: var(--primary-color);
+    border-radius: 8px;
+    padding: 5px 10px;
+    display: inline-flex;
+    align-items: center;
+    color: var(--text-color);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    font-size: 20px;
+    max-width: fit-content;
+}
+
+.main .chips-container-song {
+    margin-left: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.main .favorites,
+.main .match {
+    margin-top: 30px;
+    margin-left: 80px;
+    font-size: 20px;
+}
+
+.main .match p strong {
+    margin-left: 40px;
+    color: var(--primary-color);
+}
+
+@media (max-width: 1440px) {
+    .sidebar {
+        width: 15%;
+    }
+    .main {
+        margin-left: 18.2%;
+        width: 900px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .sidebar {
+        width: 10%;
+    }
+    .main {
+        margin-left: 13%;
+        width: 900px;
+    }
+}
+
+@media (max-width: 960px) {
+    .sidebar {
+        width: 90px;
+    }
+    .main {
+        margin-left: 123px;
+        width: 900px;
+    }
+}

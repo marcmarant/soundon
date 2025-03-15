@@ -30,7 +30,6 @@ body {
     padding: 0 1rem;
     position: fixed;
     transition: width 0.3s ease-in-out;
-    /*border-right: 1.5px solid #444444;*/
 }
 
 .sidebar a {
@@ -38,7 +37,7 @@ body {
     text-decoration: none;
 }
 
-.sidebar .sidebartop {
+.sidebartop {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -48,11 +47,11 @@ body {
     margin-bottom: 3rem;
 }
 
-.sidebar .logo {
+.logo {
     width: 50px;
 }
 
-.sidebar .logo img {
+.logo img {
     height: auto;
     max-width: 50px;
 }
@@ -63,7 +62,7 @@ body {
     object-fit: contain;
 }
 
-.sidebar .actual a .text {
+.actual a .text {
     color: var(--primary-color);
     font-weight: bold;
 }
@@ -93,7 +92,7 @@ body {
     top: -0.2rem;
 }
 
-.sidebar .account {
+.account {
     display: flex;
     justify-content: space-between;
     align-content: center;
@@ -103,7 +102,7 @@ body {
     bottom: 1rem;
 }
 
-.sidebar .account .logout a img {
+.logout a img {
     width: 1.5rem;
     height: 1.5rem;
 }
@@ -118,33 +117,44 @@ body {
        
 }
 
-.main .header {
-    background-image: url('assets/encabezado.png');
-    background-size: cover;
-    background-position: center;
+.header {
+    position: relative; 
     height: 150px;
+    overflow: hidden; 
 }
 
-.main .profile {
+.header-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    object-position: center; 
+}
+
+.profile {
     display: flex;
     align-items: center;
     padding: 15px;
     position: relative;
 }
 
-.main .avatar {
+.avatar {
     width: 80px;
     height: 80px;
     border-radius: 50%;
-    background-image: url('assets/perfil.jpg');
-    background-size: cover;
-    background-position: center;
-    border: 2px solid white;
+    border: 1px solid white;
     position: absolute;
     top: -40px;
+    overflow: hidden; 
 }
 
-.main .edit-button {
+.avatar-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    object-position: center; 
+}
+
+.edit-button {
     margin-left: auto;
     padding: 5px 10px;
     border: none;
@@ -156,26 +166,26 @@ body {
     font-weight: bold;
 }
 
-.main .info {
+.info {
     padding: 10px 15px;
 }
 
-.main .bio {
+.bio {
     color: #f4f4f4;
 }
 
-.main .info .nombreUsuario{
+.nombreUsuario{
     color:  #b6b6b6;
 
 }
 
-.main .details span {
+.details span {
     display: block;
     color:  #b6b6b6;
     font-size: 14px;
 }
 
-.main .details .followers span {
+.followers span {
     float: left;
     margin: 10px;
 }
@@ -184,13 +194,13 @@ body {
     clear: both;
 }
 
-.main .tabs {
+.tabs {
     display: flex;
     justify-content: space-around;
     border-bottom: 1px solid #444444;
 }
 
-.main .tabs button {
+.tabs button {
     background: none;
     border: none;
     padding: 10px;
@@ -199,24 +209,25 @@ body {
     color: #b6b6b6;
 }
 
-.main .tabs .active {
+
+.tabs .active {
     color: #e0122f;
     border-bottom: 2px solid #e0122f;
     font-weight: bold;
 }
 
-.main .tabs button:hover {
+.tabs button:hover {
     color: var(--primary-color);
 }
 
-.main .contenido{
+.contenido{
     background-color: #303030;
     margin: 15px;
     border-radius: 10px;
 }
 
 
-.main .calendarContainer {
+.calendarContainer {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -224,7 +235,7 @@ body {
     margin-top: 40px;
 }
 
-.main .calendar {
+.calendar {
     width: 600px;
     height: auto;
     display: flex;
@@ -235,14 +246,14 @@ body {
     box-shadow: 0 0 10px rgb(0, 0, 0, 0.3);
 }
 
-.main .calendarInfor {
+.calendarInfor {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px;
 }
 
-.main .calendarInfor button {
+.calendarInfor button {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -255,25 +266,25 @@ body {
     background: #222;
 }
 
-.main .week {
+.week {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
 }
 
-.main .day {
+.day {
     text-align: center;
     padding: 5px;
     color: #f4f4f4;
     font-weight: 500;
 }
 
-.main .dates {
+.dates {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     gap: 5px;
 }
 
-.main .date {
+.date {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -287,18 +298,18 @@ body {
     transition: 0.2s;
 }
 
-.main .date:hover {
+.date:hover {
     color: darkred;
 }
 
-.main .marked {
+.marked {
     background: var(--primary-color);
     border-radius: 25%;
     padding: 5px;
     cursor: pointer;
 }
 
-.main .today {
+.today {
     background: #f4f4f4;
     color: #303030;
     border-radius: 25%;
@@ -306,14 +317,14 @@ body {
     cursor: pointer;
 }
 
-.main .chips-container-gender {
+.chips-container-gender {
     margin-left: 40px;
     display: flex;
     gap: 10px;
     flex-wrap: wrap;
 }
 
-.main .chip {
+.chip {
     background-color: var(--primary-color);
     border-radius: 8px;
     padding: 5px 10px;
@@ -325,21 +336,21 @@ body {
     max-width: fit-content;
 }
 
-.main .chips-container-song {
+.chips-container-song {
     margin-left: 40px;
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
-.main .favorites,
-.main .match {
+.favorites,
+.match {
     margin-top: 30px;
     margin-left: 80px;
     font-size: 20px;
 }
 
-.main .match p strong {
+.match p strong {
     margin-left: 40px;
     color: var(--primary-color);
 }

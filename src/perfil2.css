@@ -30,7 +30,6 @@ body {
     padding: 0 1rem;
     position: fixed;
     transition: width 0.3s ease-in-out;
-    /*border-right: 1.5px solid #444444;*/
 }
 
 .sidebar a {
@@ -38,7 +37,7 @@ body {
     text-decoration: none;
 }
 
-.sidebar .sidebartop {
+.sidebartop {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -48,11 +47,11 @@ body {
     margin-bottom: 3rem;
 }
 
-.sidebar .logo {
+.logo {
     width: 50px;
 }
 
-.sidebar .logo img {
+.logo img {
     height: auto;
     max-width: 50px;
 }
@@ -93,7 +92,7 @@ body {
     top: -0.2rem;
 }
 
-.sidebar .account {
+.account {
     display: flex;
     justify-content: space-between;
     align-content: center;
@@ -103,7 +102,7 @@ body {
     bottom: 1rem;
 }
 
-.sidebar .account .logout a img {
+.logout a img {
     width: 1.5rem;
     height: 1.5rem;
 }
@@ -118,33 +117,45 @@ body {
        
 }
 
-.main .header {
-    background-image: url('assets/encabezado.png');
-    background-size: cover;
-    background-position: center;
+.header {
+    position: relative; 
     height: 150px;
+    overflow: hidden; 
 }
 
-.main .profile {
+.header-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    object-position: center;
+}
+
+.profile {
     display: flex;
     align-items: center;
     padding: 15px;
     position: relative;
 }
 
-.main .avatar {
+.avatar {
     width: 80px;
     height: 80px;
     border-radius: 50%;
-    background-image: url('assets/perfil.jpg');
-    background-size: cover;
-    background-position: center;
-    border: 2px solid white;
+    border: 1px solid white;
     position: absolute;
     top: -40px;
+    overflow: hidden; 
 }
 
-.main .edit-button {
+.avatar-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center; 
+}
+
+
+.edit-button {
     margin-left: auto;
     padding: 5px 10px;
     border: none;
@@ -156,26 +167,26 @@ body {
     font-weight: bold;
 }
 
-.main .info {
+.info {
     padding: 10px 15px;
 }
 
-.main .bio {
+.bio {
     color: #f4f4f4;
 }
 
-.main .info .nombreUsuario{
+.nombreUsuario{
     color:  #b6b6b6;
 
 }
 
-.main .details span {
+.details span {
     display: block;
     color:  #b6b6b6;
     font-size: 14px;
 }
 
-.main .details .followers span {
+.followers span {
     float: left;
     margin: 10px;
 }
@@ -184,13 +195,13 @@ body {
     clear: both;
 }
 
-.main .tabs {
+.tabs {
     display: flex;
     justify-content: space-around;
     border-bottom: 1px solid #444444;
 }
 
-.main .tabs button {
+.tabs button {
     background: none;
     border: none;
     padding: 10px;
@@ -199,36 +210,24 @@ body {
     color: #b6b6b6;
 }
 
-.main .tabs .active {
+.tabs .active {
     color: #e0122f;
     border-bottom: 2px solid #e0122f;
     font-weight: bold;
 }
 
-.main .tabs button:hover {
+.tabs button:hover {
     color: var(--primary-color);
 }
 
-.main .contenido{
+.contenido{
     background-color: #303030;
     margin: 15px;
     border-radius: 10px;
 }
 
-.main .contenido .music-card{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #e0122f;
-    border-radius: 8px;
-    height: auto; /* Permite que la altura se ajuste al contenido */
-    padding: 20px;
-    margin-bottom: 20px; /* Añade espacio entre las tarjetas */
-    
-}
 
-
-.main .contenido .infocuenta{
+.infocuenta{
     height: 50px;
     width: 100%;
     background-color: #303030;
@@ -241,39 +240,14 @@ body {
 }
 
 
-.main .contenido .avatarMini img{
+.contenido .avatarMini img{
     width: 45px;
     height: 45px;
     border-radius: 50%;
     background-size: cover;
     background-position: center;
     border: 1px solid white;
-    position: relative; /* Cambia a relative o elimina esta línea */
-}
-
-.main .contenido .portada {
-    width: 800px;
-    height: 500px;
-    background-image: url('assets/encabezado.png');
-    background-size: cover;
-    background-position: center;
-    border-radius: 3%;
-    border: 1px solid white;
-    position: relative; /* Cambia a relative o elimina esta línea */
-
-}
-
-.main .contenido .actions {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-.main .contenido .play {
-    background: none;
-    border: none;
-    color: white;
-    font-size: 18px;
-    cursor: pointer;
+    position: relative; 
 }
 
 /* prueba*/
@@ -283,41 +257,15 @@ body {
     padding: 15px;
     border-radius: 10px;
     background-color: #303030;
-    /*box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);*/
     position: relative;
     text-align: center;
     flex-direction: column;
     justify-content: space-between;
     overflow: hidden;
-    margin-bottom: 20px; /* Añade espacio entre las tarjetas */
-    align-items: center; /* Centra horizontalmente */
+    margin-bottom: 20px;
+    align-items: center; 
 }
 
-.card .content {
-    position: relative;
-    z-index: 1;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-}
-
-.profile-circle {
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    border: 2px solid white;
-    display: inline-block;
-    margin-right: 10px;
-}
-
-.friend-name {
-    font-weight: bold;
-    background: rgba(0, 0, 0, 0.5);
-    padding: 5px;
-    border-radius: 5px;
-}
 
 .options {
     font-size: 14px;
@@ -329,9 +277,9 @@ body {
 .contenedor {
     width: 700px;
     height: 700px;
-    position: relative; /* Necesario para posicionar elementos absolutos dentro */
-    overflow: hidden; /* Asegura que cualquier contenido que se desborde no sea visible */
-    margin-bottom: 20px; /* Añade espacio entre las tarjetas */
+    position: relative; 
+    overflow: hidden; 
+    margin-bottom: 20px; 
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
@@ -363,7 +311,7 @@ body {
 }
 
 .control-button img {
-    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.5)); /* Añade una sombra */
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.5)); 
 }
 
 .song-bar {
@@ -373,13 +321,13 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%; /* Asegura que ocupe todo el ancho del contenedor */
+    width: 100%; 
     height: 90px;
     position: absolute;
-    bottom: 0; /* Alinea con el borde inferior del contenedor */
-    left: 0; /* Alinea con el borde izquierdo del contenedor */
+    bottom: 0; 
+    left: 0; 
     z-index: 2;
-    box-sizing: border-box; /* Incluye el padding en el ancho total del song-bar */
+    box-sizing: border-box; 
 }
 
 .play-button {
@@ -404,12 +352,6 @@ body {
     font-size: 20px;
     
 }
-
-
-
-
-
-
 
 @media (max-width: 1440px) {
     .sidebar {

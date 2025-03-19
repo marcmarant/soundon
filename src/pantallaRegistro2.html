@@ -17,14 +17,39 @@
         <h1>SoundOn</h1>
     </div>
     <form>
-        
-        <label for="name">Name:</label>
-        <input type="text" id="name" placeholder="Name">
-
-
-        <label for="dob">Date of Birth:</label>
-        <input type="date" id="dob" placeholder="dd/mm/yyyy">
-
+        <input type="Name" id="Name" placeholder="Name">
+        <input type="Username" id="Username" placeholder="Username">
+        <div class="dob-container">
+            <select required>
+              <option disabled selected>Date</option>
+              <!-- Días del 1 al 31 -->
+              <script>
+                for (let i = 1; i <= 31; i++) {
+                  document.write(`<option value="${i}">${i}</option>`);
+                }
+              </script>
+            </select>
+          
+            <select required>
+              <option disabled selected>of</option>
+              <!-- Meses del 1 al 12 -->
+              <script>
+                for (let i = 1; i <= 12; i++) {
+                  document.write(`<option value="${i}">${i}</option>`);
+                }
+              </script>
+            </select>
+          
+            <select required>
+              <option disabled selected>birth</option>
+              <!-- Años desde 1900 hasta 2025 -->
+              <script>
+                for (let i = 2025; i >= 1900; i--) {
+                  document.write(`<option value="${i}">${i}</option>`);
+                }
+              </script>
+            </select>
+          </div>
 
         <fieldset>
             <legend>Gender:</legend>
@@ -34,7 +59,7 @@
             
         </fieldset>
 
-        <a href="pantallaRegistro3.html" class="button">Login</a>
+        <a href="pantallaRegistro3.html" class="button">Next</a>
 
     </form>
 </body>

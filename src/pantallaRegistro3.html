@@ -6,10 +6,12 @@
     <title>SoundOn Preferences Page</title>
     <link rel="stylesheet" href="pantallaRegistro3.css">
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
     <link rel="icon" href="assets/logo.png" type="image/png">
 </head>
 <body>
-    <h2>Preferred genres:</h2>
+    <h2>Let us know who you are</h2>
     <div class="genres">
         <button class="genre">Pop</button>
         <button class="genre active">Rock</button>
@@ -26,19 +28,38 @@
         <button class="genre">Salsa</button>
         <button class="genre active">Other</button>
     </div>
+    
+    
+    <div class="input-wrapper">
+        <input type="search" class="input" placeholder="Select up to 5 artists/bands">
+      
+        <svg xmlns="http://www.w3.org/2000/svg" class="input-icon" viewBox="0 0 20 20" fill="currentColor">
+          <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd" />
+        </svg>
+        
+      </div>
+      </div>
 
-    <h2>Artists/Bands:</h2>
-    <p>Choose up to 5</p>
-    <div class="search">
-        <input type="text" placeholder="Search">
-        <button>🔍</button>
-    </div>
-
+     
+   
     <ul class="selected-artists">
-        <li>* 1º Artista</li>
-        <li>* 2º Artista</li>
-        <li>* 3º Artista</li>
+        <li class="artist-item">
+            <img src="assets/carole-king.jpg" alt="Carole King">
+            <span class="artist-name">Carole King</span>
+            <button class="remove-btn">&times;</button>
+        </li>
+        <li class="artist-item">
+            <img src="assets/weekend.png" alt="The Weekend">
+            <span class="artist-name">The Weekend</span>
+            <button class="remove-btn">&times;</button>
+        </li>
+        <li class="artist-item">
+            <img src="assets/taylor.png" alt="Taylor Swift">
+            <span class="artist-name">Taylor Swift</span>
+            <button class="remove-btn">&times;</button>
+        </li>
     </ul>
+    
 
     <a href="pantallaRegistro3.html" class="button">Done</a>
 </body>

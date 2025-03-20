@@ -3,67 +3,107 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Soundon Perfil</title>
+    <title>Perfil</title>
+
     <link rel="stylesheet" href="../index.css">
     <link rel="stylesheet" href="../styles/sidebar.css">
     <link rel="stylesheet" href="detailedSong.css">
     <link rel="icon" href="../../assets/logo.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+
 </head>
 <body>
-    <aside>
-        <img src="../../assets/logo.png" alt="SoundOn">
-        <nav>
-            <a href="../friends/friends.html">
-                <i class="icon_friends"></i>
-                Friends
-            </a>
-            <a href="friends.html">
-                <i class="icon_explore"></i>
-                Explore
-            </a>
-            <a class="current_page">
-                <i class="icon_profile"></i>
-                Profile
-            </a>
-        </nav>
-    </aside>
-    <main>
-        <div class="post-container">
-            <div class="post">
-                <h3>@SeptimoSevero</h3>
-                <div class="content">
-                    <img src="../../assets/portada1.jpg" alt="Imagen de portada">
-                    <div class="song">
-                        <span class="song-title">La senda del tiempo </span>
-                        <span class="artist">- Celtas Cortos</span>
-                        <span class="play-button">▶</span>
+    <div class="container">
+        <div class="sidebar">
+            <div class="sidebartop">
+                <div class="logo">
+                    <img src="assets/logo.png" alt="Logo de SounOn" height="70px">
+                </div>
+               
+            </div>
+           
+            <nav>
+                <ul>
+                    <li><a href="#"><img src="assets/friends.png" alt="Friends"><span class="text">Friends</span></a></li>
+                    <li><a href="#"><img src="assets/explore.png" alt="Explore"><span class="text">Explore</span></a></li>
+                    <div class="actual">
+                        <li><a href="#"><img src="assets/profileRed.png" alt="Profile"><span class="text">Profile</span></a></li>
                     </div>
-                    <div class="feeling">Feeling: <span class="mood">Nostalgic</span></div>
+                    <li><a href="#"><img src="assets/notifications.png" alt="Notifications"><span class="text">Notifications</span></a></li>
+                </ul>
+            </nav>
+            <div class="account">
+                <div class="logout">
+                    <a href="#"><img src="assets/logout.png" alt="Logout"></i></a>
                 </div>
             </div>
-            <div class="comments-container">
-                <div class="stats">
-                    <span class="likes">10 ❤️</span>
-                    <span class="comments">2 💬</span>
+        </div>
+        <div class="main">
+           
+            <div class="profile-container">
+                <div class="post">
+                    <div class="header">
+                        <span class="back-button" onclick="location.href='perfil2.html'">&#8592;</span>
+                            <img src="assets/perfil.jpg" alt="Foto de perfil" class="profile-pic">
+                        <span class="friend-name">  SeptimoSevero</span>
+                    </div>
+                    <div class="content">
+                        <img src="assets/portada1.jpg"alt="Imagen de portada">
+                        <div class="song">
+                            <div class="song-text">
+                                <span class="song-title">La senda del tiempo</span>
+                                <span class="artist">Celtas Cortos</span>
+                            </div>
+                            <button class="play-button">▶</button>
+                        </div>
+                        <div class="feeling">Feeling: <span class="mood">Nostalgic</span></div>
+                    </div>
+                 
                 </div>
-                <h3>Comentarios</h3>
-                <div class="comment">
-                    <span class="comment-author">@segis45</span>
-                    <span class="comment-time">1h ago</span>
-                    <p class="comment-text">Bua cada vez que escucho esta canción, siento que viajo en el tiempo. ¡Qué joya!</p>
+                <div class="stats-bar">
+                    <div class="stat-item">
+                        <i class="fa fa-heart" style="color: red;"></i> <!-- Ícono de corazón -->
+                        <span>10</span> <!-- Número de likes debajo -->
+                    </div>
+                    <div class="stat-item">
+                        <i class="fa fa-comment" style="color: white;"></i> <!-- Ícono de comentarios -->
+                        <span>3</span> <!-- Número de comentarios debajo -->
+                    </div>
+                    <div class="stat-item options">
+                        <i class="fa fa-ellipsis-h" style="color: white;"></i> <!-- Tres puntos -->
+                    </div>
                 </div>
-                <div class="comment">
-                    <span class="comment-author">@Boniqueloque</span>
-                    <span class="comment-time">2h ago</span>
-                    <p class="comment-text">Los Celtas Cortos y su magia 🔥 </p>
-                </div>
-                <div class="comment">
-                    <span class="comment-author">@laIslaa</span>
-                    <span class="comment-time">2h ago</span>
-                    <p class="comment-text">Temooón </p>
+               
+                <div class="comments-section">
+                    <h3>Comentarios</h3>
+                    <div class="comment">
+                        <span class="comment-author">@segis45</span>
+                        <span class="comment-time">1h ago</span>
+                        <p class="comment-text">Bua cada vez que escucho esta canción, siento que viajo en el tiempo. ¡Qué joya!</p>
+                    </div>
+                    <div class="comment">
+                        <span class="comment-author">@Boniqueloque</span>
+                        <span class="comment-time">2h ago</span>
+                        <p class="comment-text">Los Celtas Cortos y su magia 🔥 </p>
+                    </div>
+                    <div class="comment">
+                        <span class="comment-author">@laIslaa</span>
+                        <span class="comment-time">2h ago</span>
+                        <p class="comment-text">Temooón </p>
+                    </div>
                 </div>
             </div>
-        </div>    
-    </main>
+                 
+       
+       
+       
+
+
+            </div>
+        </div>
+           
+    </div>
+   
 </body>
 </html>

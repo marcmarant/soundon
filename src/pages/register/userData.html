@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SoundOn Register</title>
+    <link rel="icon" href="../../assets/logo.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../index.css">
+    <link rel="stylesheet" href="register.css">
+</head>
+<body>
+    <main>
+        <div class="logo">
+            <img src="../../assets/logo.png" alt="SoundOn Logo" width="50">
+            <h1>SoundOn</h1>
+        </div>
+        <form>
+            <input type="text" id="name" placeholder="Name">
+            <input type="text" id="username" placeholder="Username">
+            <div class="date_container">
+                <select required>
+                <option disabled selected>Date</option>
+                <!-- Días del 1 al 31 -->
+                <script>
+                    for (let i = 1; i <= 31; i++) {
+                    document.write(`<option value="${i}">${i}</option>`);
+                    }
+                </script>
+                </select>
+                <select required>
+                <option disabled selected>of</option>
+                <!-- Meses del 1 al 12 -->
+                <script>
+                    for (let i = 1; i <= 12; i++) {
+                    document.write(`<option value="${i}">${i}</option>`);
+                    }
+                </script>
+                </select>
+                <select required>
+                <option disabled selected>birth</option>
+                <!-- Años desde 1900 hasta 2025 -->
+                <script>
+                    for (let i = 2025; i >= 1900; i--) {
+                    document.write(`<option value="${i}">${i}</option>`);
+                    }
+                </script>
+                </select>
+            </div>
+            <!-- <input type="date" id="dob" placeholder="dd/mm/yyyy"> -->
+            <fieldset>
+                <legend>Gender:</legend>
+                <label><input type="radio" name="gender" value="male">Male</label>
+                <label><input type="radio" name="gender" value="female"> Female</label>
+                <label><input type="radio" name="gender" value="other"> Other</label>
+            </fieldset>
+            <a href="preferences.html" class="button">Next</a>
+        </form>
+    </main>
+</body>
+</html>

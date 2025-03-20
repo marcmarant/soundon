@@ -1,0 +1,177 @@
+.container {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+
+.account {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+    width: calc(100% - 2rem);
+    position: absolute;
+    bottom: 1rem;
+}
+
+.logout a img {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+
+
+
+
+.calendar {
+    width: 600px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    background: #222;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgb(0, 0, 0, 0.3);
+    margin: 50px 0 50px 0;
+}
+
+.calendar_info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.calendarInfor button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    color: var(--text-color);
+    background: #222;
+}
+
+.week {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+}
+
+.day {
+    text-align: center;
+    padding: 5px;
+    color: #f4f4f4;
+    font-weight: 500;
+}
+
+.dates {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+}
+
+.date {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+    margin: auto;
+    font-weight: 600;
+    border-radius: 25%;
+    width: 40px;
+    height: 40px;
+    transition: 0.2s;
+}
+
+.date:hover {
+    color: darkred;
+}
+
+.marked {
+    background: var(--primary-color);
+    border-radius: 25%;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.today {
+    background: #f4f4f4;
+    color: #303030;
+    border-radius: 25%;
+    padding: 5px;
+    cursor: pointer;
+}
+
+h3 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.chips-container-gender {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.chip {
+    background-color: var(--primary-color);
+    border-radius: 8px;
+    padding: 5px 10px;
+    display: inline-flex;
+    align-items: center;
+    color: var(--text-color);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    font-size: 20px;
+    max-width: fit-content;
+}
+
+.chips-container-song {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.favorites,
+.match {
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+
+.match p strong {
+    color: var(--primary-color);
+}
+
+@media (max-width: 1440px) {
+    .sidebar {
+        width: 15%;
+    }
+    .main {
+        margin-left: 18.2%;
+        width: 900px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .sidebar {
+        width: 10%;
+    }
+    .main {
+        margin-left: 13%;
+        width: 900px;
+    }
+}
+
+@media (max-width: 960px) {
+    .sidebar {
+        width: 90px;
+    }
+    .main {
+        margin-left: 123px;
+        width: 900px;
+    }
+}

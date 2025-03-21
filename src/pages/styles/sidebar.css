@@ -7,20 +7,21 @@ aside {
   height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border-right: solid 3px var(--primary-color);
+  justify-content: start;
+  align-items: left;
+  /* border-right: solid 3px var(--primary-color); */
+  padding-left: 30px;
 }
 
 aside img {
-  width: 100px;
-  transform: translateY(-100px);
+  width: 50px;
+  margin: 20px 0 50px 0;
 }
 
 nav {
   display: flex;
   flex-direction: column;
-  transform: translateY(-50px);
+  gap: 20px;
 }
 
 nav a {
@@ -28,18 +29,19 @@ nav a {
   flex-direction: row;
   align-items: center;
   margin-bottom: 20px;
-  font-size: 1.5em;
+  font-size: 1em;
 }
 nav .current_page {
   color: var(--primary-color);
   cursor: default;
 }
 nav a:hover {
-  color: var(--primary-color)
+  color: var(--primary-color);
 }
 
 nav a i {
-  margin-right: 20px;
+  margin-right: 10px;
+  background-repeat: no-repeat;
 }
 nav a:hover > i {
   /* Filtro para obtener el color primario #e0122f en el icono */
@@ -54,10 +56,10 @@ nav .current_page i {
   right: 10px;
   top: 40px;
   display: inline-block;
-  width: 25px;
-  height: 25px;
+  width: 20px;
+  height: 20px;
   background-image: url('../../assets/icons/friends.svg');
-  background-repeat: no-repeat;
+  /* background-image: url('../../assets/friends.png'); */
   cursor: pointer;
 }
 
@@ -65,9 +67,21 @@ nav .current_page i {
   right: 10px;
   top: 40px;
   display: inline-block;
-  width: 25px;
-  height: 25px;
+  width: 20px;
+  height: 20px;
   background-image: url('../../assets/icons/leaf.svg');
+  /* background-image: url('../../assets/exploreRed.png'); */
+  cursor: pointer;
+}
+
+.icon_notifications {
+  right: 10px;
+  top: 40px;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-image: url('../../assets/icons/notifications.svg');
+  /* background-image: url('../../assets/notifications.png'); */
   cursor: pointer;
 }
 
@@ -75,9 +89,10 @@ nav .current_page i {
   right: 10px;
   top: 40px;
   display: inline-block;
-  width: 25px;
-  height: 25px;
+  width: 20px;
+  height: 20px;
   background-image: url('../../assets/icons/profile.svg');
+  /* background-image: url('../../assets/profile.png'); */
   cursor: pointer;
 }
 
@@ -86,4 +101,32 @@ main {
   margin-left: 20vw;
   width: 80vw;
   overflow-x: hidden;
+}
+
+.logout {
+  position: absolute;
+  bottom: 5%;
+  font-size: large;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+.logout:hover {
+  color: var(--primary-color);
+}
+.logout:hover > i {
+  /* Filtro para obtener el color primario #e0122f en el icono */
+  filter: brightness(0) saturate(100%) invert(17%) sepia(99%) saturate(5288%) hue-rotate(345deg) brightness(89%) contrast(97%);
+}
+
+.icon_logout {
+  right: 10px;
+  top: 40px;
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background-image: url('../../assets/icons/logout.svg');
+  cursor: pointer;
 }

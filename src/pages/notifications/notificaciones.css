@@ -1,0 +1,254 @@
+:root {
+    --background-color: #161823;
+    --text-color: #e6e6e6;
+    --primary-color: #fe2c55;
+    --border-color: #343434;
+    --spacing-color: #21232f;
+    --icon-color: #888;
+    --mention-color: #a0a0a0; /* Color para las menciones */
+}
+
+body {
+    color: var(--text-color);
+    padding: 0;
+    margin: 0;
+    min-height: 100vh;
+    overflow: auto;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    background-color: var(--background-color);
+}
+
+.container {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.sidebar {
+    width: 120px; /* Aumentamos el ancho del sidebar */
+    background-color: var(--background-color);
+    color: white;
+    height: 100%;
+    padding: 1rem 0;
+    position: fixed;
+    transition: width 0.3s ease-in-out;
+}
+
+.sidebar a {
+    color: var(--text-color);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+}
+
+.sidebar a img {
+    width: 24px;
+    height: 24px;
+}
+
+.sidebartop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1rem;
+    height: 70px;
+    margin-bottom: 3rem;
+}
+
+.logo img {
+    height: auto;
+    max-width: 50px;
+}
+
+.sidebar nav ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    margin-bottom: 50px; /* Espacio adicional entre la lista y el logout */
+}
+
+.sidebar nav ul li {
+    display: block;
+    align-items: center;
+    padding: 1.25rem 0;
+    position: relative;
+    background-color: transparent;
+    transition: background-color 0.25s ease-in-out;
+}
+
+.sidebar nav ul li a .text {
+    position: relative;
+    left: 1rem;
+    top: -0.2rem;
+}
+
+.actual a .text {
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.account {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: calc(100% - 2rem);
+    position: absolute;
+    bottom: 1rem;
+}
+
+.logout a img {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.main {
+    margin-left: 130px; /* Ajustamos el margen izquierdo para separar del sidebar */
+    width: calc(100% - 130px);
+    background-color: var(--background-color);
+    border-left: 2px solid var(--border-color); /* Hacemos la división más visible */
+    overflow: hidden;
+    padding: 20px;
+}
+
+.notifications-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.notifications-header h2 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.filters {
+    display: flex;
+    gap: 10px;
+}
+
+.filter-button {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    padding: 5px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.filter-button.active, .filter-button:hover {
+    background-color: var(--primary-color);
+}
+
+.notifications-section {
+    width: 100%;
+    background-color: var(--spacing-color);
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.notification {
+    display: flex;
+    align-items: flex-start;
+    padding: 10px;
+    border-bottom: 1px solid var(--border-color);
+    position: relative;
+}
+
+.user-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.notification-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.notification-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.notification-header strong {
+    font-size: 14px;
+}
+
+.timestamp {
+    font-size: 12px;
+    color: var(--icon-color);
+    margin-left: auto;
+}
+
+.notification-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.action-button {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    padding: 5px 15px;
+    cursor: pointer;
+    font-size: 12px;
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.action-button:hover {
+    background-color: var(--primary-color);
+}
+
+.notification-reactions {
+    display: flex;
+    gap: 5px;
+    margin-top: 5px;
+}
+
+.notification-reactions span {
+    font-size: 12px; /* Reducimos el tamaño de la fuente para las menciones */
+    color: var(--mention-color);
+}
+
+.play-button img {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+.play-button {
+    background-color: var(--background-color);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    padding: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.play-button img {
+    width: 24px;
+    height: 24px;
+}
+
+.play-button:hover {
+    background-color: var(--primary-color);
+}

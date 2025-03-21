@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Perfil</title>
+    <link rel="stylesheet" href="ajustes.css">
+    <link rel="icon" href="assets/logo.png" type="image/png">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="sidebartop">
+                <div class="logo">
+                    <img src="assets/logo.png" alt="Logo de SounOn" height="70px">
+                </div>
+                
+            </div>
+            
+            <nav>
+                <ul>
+                    <li><a href="friends.html"><img src="assets/friends.png" alt="Friends"><span class="text">Friends</span></a></li>
+                    <li><a href="explore.html"><img src="assets/explore.png" alt="Explore"><span class="text">Explore</span></a></li>
+                    <div class="actual">
+                    <li><a href="perfil1.html"><img src="assets/profileRed.png" alt="Profile"><span class="text">Profile</span></a></li>
+                    </div>
+                    <li><a href=""><img src="assets/notifications.png" alt="Notifications"><span class="text">Notifications</span></a></li>
+                   
+                </ul>
+            </nav>
+            <div class="account">
+                <div class="logout">
+                    <a href="registro.html"><img src="assets/logout.png" alt="Logout"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="main">
+            <div class="header">
+                <img src="assets/header.png" alt="Header Image" class="header-image">
+                <input type="file" id="header-upload" class="file-input">
+                <label for="header-upload" class="upload-label">
+                    <img src="assets/editarNegro.png" alt="Edit Icon">
+                </label>
+            </div>
+            <div class="profile">
+                <div class="avatar">
+                    <div class="marco">
+                    <img src="assets/perfil2.jpg" alt="Profile Avatar" class="avatar-image">
+                    </div>
+                    <input type="file" id="avatar-upload" class="file-input">
+                    <label for="avatar-upload" class="upload-label_avatar">
+                        <img src="assets/editarNegro.png" alt="Edit Icon">
+                    </label>
+                </div>
+
+                <button class="eliminar-button">Eliminar cuenta</button>
+                
+            </div>
+            <div class="info">
+                
+                
+            </div>
+          
+            <div class="contenido">
+
+                <section class="settings-section"></section>
+                    <form class="settings-form">
+                        <label for="username">Nombre de usuario:</label>
+                        <input type="text" id="username" name="username" value="maria.gh">
+                        <p class="note">El nombre de usuario solo puede contener letras, números, guiones bajos y puntos.</p>
+
+                        <label for="name">Nombre:</label>
+                        <input type="text" id="name" name="name" value="Mariaa">
+                        <small>El apodo solo se puede cambiar una vez cada 7 días.</small>
+
+                        <label for="description">Descripción corta:</label>
+                        <textarea id="description" name="description">No puedo imaginarme un día sin escuchar música. Estoy aprendiendo a tocar la guitarra :p</textarea>
+
+                        
+                    </form>
+
+
+                    <div class="editarGeneros">
+                        <div class="genres">
+                            <button class="genre">Pop</button>
+                            <button class="genre active">Rock</button>
+                            <button class="genre">Punk</button>
+                            <button class="genre">Jazz</button>
+                            <button class="genre active">Rap</button>
+                            <button class="genre">Hip Hop</button>
+                            <button class="genre">Flamenco</button>
+                            <button class="genre">Electronica</button>
+                            <button class="genre">Metal</button>
+                            <button class="genre">Reggae</button>
+                            <button class="genre">Reggaeton</button>
+                            <button class="genre">Disco</button>
+                            <button class="genre">Salsa</button>
+                            <button class="genre active">Other</button>
+                        </div>
+                
+
+
+                    </main>
+                    </div>
+
+                    <div class="editarCancionesFavoritas">
+                    
+
+                        <div class="input-wrapper">
+                            <input type="search" class="input" placeholder="Select up to 5 artists/bands">
+                            <i class="icon_search"></i>
+                        </div>
+                
+                        <ul class="selected-artists">
+                            <li class="artist-item">
+                                <img src="assets/pride_kendrick lamar.jpeg" alt="Kendrick Lamar">
+                                <span class="artist-name">PRIDE. - Kendrick Lamar</span>
+                                <i class="remove-btn">&times;</i>
+                            </li>
+                            <li class="artist-item">
+                                <img src="assets/album cover _selfless.jpeg" alt="The Strokes">
+                                <span class="artist-name">Selfless - The Strokes</span>
+                                <i class="remove-btn">&times;</i>
+                            </li>
+                            <li class="artist-item">
+                                <img src="assets/album cover no surprises.jpeg" alt="Radiohead">
+                                <span class="artist-name">No Surprises - Radiohead</span>
+                                <i class="remove-btn">&times;</i>
+                            </li>
+                        </ul>
+                
+                       
+                    </div>
+
+
+
+
+
+
+                </section>
+
+                <div class="bottom-buttons">
+                    <button type="button" class="cancel-button">Cancelar</button>
+                    <button type="submit" class="save-changes">Guardar</button>
+                </div>
+
+
+
+    
+                
+        
+        
+                
+
+            </div>
+        </div>
+            
+    </div>
+    
+</body>
+</html>

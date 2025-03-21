@@ -1,4 +1,5 @@
 :root {
+<<<<<<< HEAD
     --background-color: #303030;
     --text-color: #f4f4f4;
     --primary-color: #e0122f;
@@ -6,13 +7,29 @@
 
 body {
     color: white;
+=======
+    --background-color: #161823;
+    --text-color: #e6e6e6;
+    --primary-color: #fe2c55;
+    --border-color: #343434;
+    --spacing-color: #21232f;
+    --icon-color: #888;
+    --mention-color: #a0a0a0; /* Color para las menciones */
+}
+
+body {
+    color: var(--text-color);
+>>>>>>> 3b387b561f70f4bd85bef78a2206e448dfc5f25d
     padding: 0;
     margin: 0;
     min-height: 100vh;
     overflow: auto;
     font-family: Arial, sans-serif;
     font-size: 14px;
+<<<<<<< HEAD
     zoom: 200%;
+=======
+>>>>>>> 3b387b561f70f4bd85bef78a2206e448dfc5f25d
     background-color: var(--background-color);
 }
 
@@ -22,6 +39,7 @@ body {
 }
 
 .sidebar {
+<<<<<<< HEAD
     width: 26%;
     min-width: 100px;
     left: 0;
@@ -37,10 +55,34 @@ body {
 .sidebar a {
     color: white;
     text-decoration: none;
+=======
+    width: 120px; /* Aumentamos el ancho del sidebar */
+    background-color: var(--background-color);
+    color: white;
+    height: 100%;
+    padding: 1rem 0;
+    position: fixed;
+    transition: width 0.3s ease-in-out;
+}
+
+.sidebar a {
+    color: var(--text-color);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+}
+
+.sidebar a img {
+    width: 24px;
+    height: 24px;
+>>>>>>> 3b387b561f70f4bd85bef78a2206e448dfc5f25d
 }
 
 .sidebartop {
     display: flex;
+<<<<<<< HEAD
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
@@ -53,11 +95,21 @@ body {
     width: 50px;
 }
 
+=======
+    justify-content: center;
+    align-items: center;
+    padding-top: 1rem;
+    height: 70px;
+    margin-bottom: 3rem;
+}
+
+>>>>>>> 3b387b561f70f4bd85bef78a2206e448dfc5f25d
 .logo img {
     height: auto;
     max-width: 50px;
 }
 
+<<<<<<< HEAD
 .sidebar nav ul li a img {
     width: 24px;
     height: 24px;
@@ -69,10 +121,16 @@ body {
     font-weight: bold;
 }
 
+=======
+>>>>>>> 3b387b561f70f4bd85bef78a2206e448dfc5f25d
 .sidebar nav ul {
     padding: 0;
     margin: 0;
     list-style: none;
+<<<<<<< HEAD
+=======
+    margin-bottom: 50px; /* Espacio adicional entre la lista y el logout */
+>>>>>>> 3b387b561f70f4bd85bef78a2206e448dfc5f25d
 }
 
 .sidebar nav ul li {
@@ -84,20 +142,34 @@ body {
     transition: background-color 0.25s ease-in-out;
 }
 
+<<<<<<< HEAD
 .sidebar nav ul li a {
     display: block;
 }
 
+=======
+>>>>>>> 3b387b561f70f4bd85bef78a2206e448dfc5f25d
 .sidebar nav ul li a .text {
     position: relative;
     left: 1rem;
     top: -0.2rem;
 }
 
+<<<<<<< HEAD
 .account {
     display: flex;
     justify-content: space-between;
     align-content: center;
+=======
+.actual a .text {
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.account {
+    display: flex;
+    justify-content: center;
+>>>>>>> 3b387b561f70f4bd85bef78a2206e448dfc5f25d
     align-items: center;
     width: calc(100% - 2rem);
     position: absolute;
@@ -109,6 +181,7 @@ body {
     height: 1.5rem;
 }
 
+<<<<<<< HEAD
 
 @media (max-width: 1440px) {
     .sidebar {
@@ -195,6 +268,17 @@ body {
 }*/
 
 
+=======
+.main {
+    margin-left: 130px; /* Ajustamos el margen izquierdo para separar del sidebar */
+    width: calc(100% - 130px);
+    background-color: var(--background-color);
+    border-left: 2px solid var(--border-color); /* Hacemos la división más visible */
+    overflow: hidden;
+    padding: 20px;
+}
+
+>>>>>>> 3b387b561f70f4bd85bef78a2206e448dfc5f25d
 .notifications-header {
     display: flex;
     justify-content: space-between;
@@ -271,6 +355,7 @@ body {
 
 .timestamp {
     font-size: 12px;
+<<<<<<< HEAD
     color: #888;
     margin-top: 5px; /* Espacio del comentario */
     align-self: flex-start; /* Se alinea correctamente */
@@ -285,12 +370,20 @@ body {
     justify-content: space-between;
     align-items: center;
     width: 100%;
+=======
+    color: var(--icon-color);
+    margin-left: auto;
+>>>>>>> 3b387b561f70f4bd85bef78a2206e448dfc5f25d
 }
 
 .notification-actions {
     display: flex;
+<<<<<<< HEAD
     margin-left: auto; /* Empuja el botón a la derecha */
     gap: 10px; /* Si tienes más botones, agrega un pequeño espacio entre ellos */
+=======
+    gap: 10px;
+>>>>>>> 3b387b561f70f4bd85bef78a2206e448dfc5f25d
 }
 
 .action-button {
@@ -309,4 +402,45 @@ body {
 
 .action-button:hover {
     background-color: var(--primary-color);
+<<<<<<< HEAD
+=======
+}
+
+.notification-reactions {
+    display: flex;
+    gap: 5px;
+    margin-top: 5px;
+}
+
+.notification-reactions span {
+    font-size: 12px; /* Reducimos el tamaño de la fuente para las menciones */
+    color: var(--mention-color);
+}
+
+.play-button img {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+.play-button {
+    background-color: var(--background-color);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    padding: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.play-button img {
+    width: 24px;
+    height: 24px;
+}
+
+.play-button:hover {
+    background-color: var(--primary-color);
+>>>>>>> 3b387b561f70f4bd85bef78a2206e448dfc5f25d
 }

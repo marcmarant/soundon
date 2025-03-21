@@ -1,3 +1,4 @@
+
 :root {
     --background-color: #303030;
     --text-color: #f4f4f4;
@@ -500,4 +501,5 @@ body {
 
 .selected-artists, .artist-item {
     width: 280px;
+
 }

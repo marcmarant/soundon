@@ -55,3 +55,17 @@ input::placeholder {
 fieldset label {
   height: 50px;
 }
+.back-button {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 24px;
+  cursor: pointer;
+  text-decoration: none;
+  color: rgb(204, 15, 15);
+  font-weight: bold;
+}
+
+.back-button:hover {
+  color: rgb(94, 17, 17);
+}

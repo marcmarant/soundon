@@ -1,0 +1,503 @@
+:root {
+    --background-color: #303030;
+    --text-color: #f4f4f4;
+    --primary-color: #e0122f;
+}
+
+body {
+    color: white;
+    padding: 0;
+    margin: 0;
+    min-height: 100vh;
+    overflow: auto;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    background-color: var(--background-color);
+}
+
+.container {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.sidebar {
+    width: 26%;
+    min-width: 100px;
+    left: 0;
+    background-color: var(--background-color);
+    color: white;
+    height: 100%;
+    padding: 0 1rem;
+    position: fixed;
+    transition: width 0.3s ease-in-out;
+    /*border-right: 1.5px solid #444444;*/
+}
+
+.sidebar a {
+    color: white;
+    text-decoration: none;
+}
+
+.sidebartop {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-top: 1rem;
+    height: 55px;
+    margin-bottom: 3rem;
+}
+
+.logo {
+    width: 50px;
+}
+
+.logo img {
+    height: auto;
+    max-width: 50px;
+}
+
+.sidebar nav ul li a img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+.actual a .text {
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.sidebar nav ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.sidebar nav ul li {
+    display: block;
+    align-items: center;
+    padding: 1.25rem 0;
+    position: relative;
+    background-color: transparent;
+    transition: background-color 0.25s ease-in-out;
+}
+
+.sidebar nav ul li a {
+    display: block;
+}
+
+.sidebar nav ul li a .text {
+    position: relative;
+    left: 1rem;
+    top: -0.2rem;
+}
+
+.account {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+    width: calc(100% - 2rem);
+    position: absolute;
+    bottom: 1rem;
+}
+
+.logout a img {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.main {
+    margin-left: 27.7%;
+    width: 900px;
+    background-color: #303030;
+    border: 1px solid #444444;
+    border-radius: 10px;
+    overflow: hidden;
+       
+}
+
+.header {
+    position: relative; /* Asegura que el contenedor se ajuste al contenido */
+    height: 150px;
+    overflow: hidden; /* Oculta cualquier contenido que se desborde */
+}
+
+.header-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que la imagen cubra todo el contenedor */
+    object-position: center; /* Centra la imagen */
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    position: relative;
+}
+
+.avatar {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    top: -40px;
+}
+
+.marco {
+   
+    border-radius: 50%;
+    border: 1px solid white;
+    overflow: hidden; /* Oculta cualquier contenido que se desborde */
+}
+
+.avatar-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que la imagen cubra todo el contenedor */
+    object-position: center; /* Centra la imagen */
+}
+
+.info {
+    padding: 10px 15px;
+}
+
+.clearfix{
+    clear: both;
+}
+
+.eliminar-button {
+    margin-left: auto;
+    padding: 5px 10px;
+    border: none;
+    background-color: #303030;
+    color: #e0122f;
+    border: 2px solid #e0122f;
+    border-radius: 15px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+
+
+.contenido{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+    padding-bottom: 40px;
+}
+
+
+
+
+
+
+
+
+
+
+.profile_top button {
+    margin-left: auto;
+    padding: 5px 10px;
+    border: none;
+    background-color: #303030;
+    color: var(--text-color);
+    border: 2px solid var(--primary-color);
+    border-radius: 15px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.profile_bottom {
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    position: relative;
+}
+
+.file-input {
+    display: none;
+}
+
+.upload-label {
+    position: absolute;
+    bottom: 10px; /* Ajusta esta posición según sea necesario */
+    right: 10px; /* Ajusta esta posición según sea necesario */
+    background-color: rgba(255, 255, 255, 0.7); /* Fondo semitransparente */
+    border-radius: 50%;
+    width: 30px; /* Ajusta el tamaño según sea necesario */
+    height: 30px; /* Ajusta el tamaño según sea necesario */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.upload-label img {
+    width: 20px;
+    height: 20px;
+}
+
+.upload-label_avatar {
+    position: absolute;
+    bottom: -5px; /* Ajusta esta posición para moverlo hacia abajo */
+    right: 5px;  /* Ajusta esta posición para moverlo hacia la derecha */
+    background-color: rgba(255, 255, 255, 0.7); /* Fondo semitransparente */
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+
+.upload-label_avatar img {
+    width: 20px;
+    height: 20px;
+}
+
+.settings-section {
+    background-color: #303030;
+    padding: 20px;
+    border-radius: 0 0 10px 10px;
+
+}
+
+.settings-form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+}
+
+.settings-form label {
+    margin-top: 10px;
+    color: var(--text-color);
+}
+
+.settings-form input,
+.settings-form textarea {
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #333;
+}
+
+.settings-form small {
+    color: #888;
+    font-size: 0.85em;
+    margin-top: 1.05%;
+}
+
+.settings-form .note {
+    color: #888;
+    font-size: 0.85em;
+    margin-top: 1.05%;
+    margin-bottom: 10px;
+}
+
+.bottom-buttons {
+    display: flex;
+    justify-content: center; /* Centra los botones */
+    gap: 230px; /* Ajusta el espacio entre los botones */
+    margin-top: 20px;
+    width: auto; /* Permite que el contenedor se ajuste al contenido */
+    padding: 0; /* Elimina el padding adicional */
+}
+
+.settings-form button,
+.bottom-buttons button {
+    padding: 10px; /* Ajusta el padding para que los botones se vean bien */
+    border: none;
+    border-radius: 5px;
+    background-color: var(--primary-color);
+    color: white;
+    cursor: pointer;
+    font-size: 16px; /* Ajusta el tamaño de la fuente */
+}
+
+.bottom-buttons .cancel-button {
+    background-color: #f44336;
+}
+
+.bottom-buttons .save-changes {
+    background-color: #4CAF50;
+}
+
+
+
+
+
+
+@media (max-width: 1440px) {
+    .sidebar {
+        width: 15%;
+    }
+    .main {
+        margin-left: 18.2%;
+        width: 900px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .sidebar {
+        width: 10%;
+    }
+    .main {
+        margin-left: 13%;
+        width: 900px;
+    }
+}
+
+@media (max-width: 960px) {
+    .sidebar {
+        width: 120px;
+    }
+    .main {
+        margin-left: 123px;
+        width: 900px;
+    }
+}
+
+
+
+.genres {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    margin: 20px 0;
+    gap: 10px; 
+    max-width: 500px;   
+}
+
+.genre {
+    padding: 10px 15px;
+    /*border: 2px solid #c91212; */
+    border: 2px solid white;
+    border-radius: 8px;
+    background-color: transparent; 
+    color: #ffffff; 
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.genre.active {
+    background-color: var(--primary-color); /* Rojo */
+    color: white;
+    border-color: var(--primary-color); /* Borde rojo */
+}
+.genre:hover {
+    background-color: var(--primary-color); 
+    color: white; 
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.search-input {
+    width: 100%;
+    padding: 10px;
+    padding-left: 110px; 
+    border: 2px solid white;
+    border-radius: 10px;
+    background: transparent;
+    color: white;
+    outline: none;
+    font-style: italic;
+}
+
+.selected-artists {
+    list-style: none;
+    padding-left: 0;
+}
+
+.selected-artists li {
+    color: #FF4A4A;
+    font-size: 1rem;
+}
+
+.selected {
+    outline: 3px solid white;
+}
+
+.artist-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; 
+}
+
+.artist-item {
+    display: flex;
+    align-items: center;
+    border-radius: 15px;
+    padding: 10px;
+    width: 250px; 
+    box-shadow: 3px 3px 10px rgba(255, 255, 255, 0.2);
+    margin-bottom: 15px; 
+    justify-content: space-between; 
+    background-color: white;
+    border: 1px solid  #ffffff; 
+}
+
+.artist-item img {
+    width: 40px; 
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover; 
+    margin-right: 10px; 
+}
+
+.artist-name {
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    flex-grow: 1; 
+}
+  
+.input-wrapper {
+    position: relative;
+    width: 280px;
+    margin-bottom: 20px;
+}
+  
+.input {
+    width: 100%;
+    padding: 15px;
+    padding-left: 50px; 
+    border: 2px solid white;
+    border-radius: 25px; /* Hace que el input sea más curvado */
+    background: transparent;
+    color: white;
+    outline: none;
+    font-style: italic;
+    font-size: 1rem; /* Aumenta el tamaño del texto */
+}
+.icon_search {
+    position: absolute;
+    transform: translate(0px, -28px);
+    left: 10px;
+    top: 40px;
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    background-image: url('../../assets/icons/search.svg');
+    cursor: pointer;
+}
+
+.selected-artists, .artist-item {
+    width: 280px;
+}

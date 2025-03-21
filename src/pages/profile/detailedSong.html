@@ -4,37 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perfil</title>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="../index.css">
+    <link rel="stylesheet" href="../styles/sidebar.css">
     <link rel="stylesheet" href="detailedSong.css">
     <link rel="icon" href="../../assets/logo.png" type="image/png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <div class="container">
-        <div class="sidebar">
-            <div class="sidebartop">
-                <div class="logo">
-                    <img src="../../assets/logo.png" alt="Logo de SounOn" height="70px">
-                </div>
-               
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="#"><img src="../../assets/friends.png" alt="Friends"><span class="text">Friends</span></a></li>
-                    <li><a href="#"><img src="../../assets/explore.png" alt="Explore"><span class="text">Explore</span></a></li>
-                    <div class="actual">
-                        <li><a href="#"><img src="../../assets/profileRed.png" alt="Profile"><span class="text">Profile</span></a></li>
-                    </div>
-                    <li><a href="#"><img src="../../assets/notifications.png" alt="Notifications"><span class="text">Notifications</span></a></li>
-                </ul>
-            </nav>
-            <div class="account">
-                <div class="logout">
-                    <a href="#"><img src="../../assets/logout.png" alt="Logout"></i></a>
-                </div>
-            </div>
-        </div>
-        <div class="main">
+    <aside>
+        <img src="../../assets/logo.png" alt="SoundOn">
+        <nav>
+            <a class="current_page">
+                <i class="icon_friends"></i>
+                Friends
+            </a>
+            <a href="../explore/explore.html">
+                <i class="icon_explore"></i>
+                Explore
+            </a>
+            <a href="../notifications/notifications.html">
+                <i class="icon_notifications"></i>
+                Notifications
+            </a>
+            <a href="../profile/info.html">
+                <i class="icon_profile"></i>
+                Profile
+            </a>
+        </nav>
+        <a href="../index.html" class="logout">
+            <i class="icon_logout"></i>
+        </a>
+    </aside>
+    <main>
+        <div class="container">
             <div class="profile-container">
                 <div class="post">
                     <div class="header">
@@ -88,16 +90,8 @@
                     </div>
                 </div>
             </div>
-                 
-       
-       
-       
-
-
             </div>
         </div>
-           
-    </div>
-   
+    </main>
 </body>
 </html>

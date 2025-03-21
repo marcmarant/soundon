@@ -1,155 +1,24 @@
-:root {
-    --background-color: #303030;
-    --text-color: #f4f4f4;
-    --primary-color: #e0122f;
-}
-
-
-body {
-    color: white;
-    padding: 0;
-    margin: 0;
-    min-height: 100vh;
-    overflow: auto;
-    font-family: Arial, sans-serif;
-    font-size: 14px;
-    background-color: var(--background-color);
-}
-
-
 .container {
-    display: flex;
-    flex-flow: row wrap;
-}
-
-
-.sidebar {
-    width: 26%;
-    min-width: 90px;
-    left: 0;
-    background-color: var(--background-color);
-    color: white;
-    height: 100%;
-    padding: 0 1rem;
-    position: fixed;
-    transition: width 0.3s ease-in-out;
-}
-
-
-.sidebar a {
-    color: white;
-    text-decoration: none;
-}
-
-
-.sidebar .sidebartop {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
-    padding-top: 1rem;
-    height: 55px;
-    margin-bottom: 3rem;
-}
-
-
-.sidebar .logo {
-    width: 50px;
-}
-
-
-.sidebar .logo img {
-    height: auto;
-    max-width: 50px;
-}
-
-
-.sidebar nav ul li a img {
-    width: 24px;
-    height: 24px;
-    object-fit: contain;
-}
-
-
-.sidebar .actual a .text {
-    color: var(--primary-color);
-    font-weight: bold;
-}
-
-
-.sidebar nav ul {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-}
-
-
-.sidebar nav ul li {
-    display: block;
-    align-items: center;
-    padding: 1.25rem 0;
-    position: relative;
-    background-color: transparent;
-    transition: background-color 0.25s ease-in-out;
-}
-
-
-.sidebar nav ul li a {
-    display: block;
-}
-
-
-.sidebar nav ul li a .text {
-    position: relative;
-    left: 1rem;
-    top: -0.2rem;
-}
-
-
-.sidebar .account {
-    display: flex;
-    justify-content: space-between;
-    align-content: center;
-    align-items: center;
-    width: calc(100% - 2rem);
-    position: absolute;
-    bottom: 1rem;
-}
-
-
-.sidebar .account .logout a img {
-    width: 1.5rem;
-    height: 1.5rem;
-}
-
-
-.main {
-    margin-left: 27.7%;
-    width: 900px;
-    background-color: #303030;
-    border: 1px solid #444444;
-    border-radius: 10px;
-    overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    width: 100%;
+    padding: 50px 0 50px 0;
 }
-
 
 .profile-container {
     display: flex;
     justify-content: space-between;
     background-color: #222;
     color: white;
-    padding: 100px;
+    padding: 10px;
     border-radius: 10px;
     width: 100%;
-    max-width: 800px;
+    max-width: 900px;
 }
 .post {
     flex: 2;
-    padding: 40px;
+    padding: 30px 30px 0 30px;
     position: relative;
     top: -30px; 
  
@@ -207,7 +76,6 @@ body {
     align-items: center;
 }
 .comments-section {
-   
     flex: 1.5; 
     width: 550px; 
     background-color: #333;
@@ -216,6 +84,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    margin-right: 20px;
 }
 .comments-section h3 {
     margin-bottom: 10px;
@@ -295,7 +164,6 @@ body {
     max-width: 60px;
     font-size: 16px;
     font-weight: bold;
-   
 }
 
 

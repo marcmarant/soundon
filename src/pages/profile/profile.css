@@ -1,3 +1,7 @@
+main {
+  border-left: 2px solid #888;
+}
+
 header {
   position: relative; 
   height: 175px;

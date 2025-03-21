@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SoundOn - Upload your daily song</title>
+    <title>Friends</title>
     <link rel="stylesheet" href="../index.css">
     <link rel="stylesheet" href="../styles/sidebar.css">
-    <link rel="stylesheet" href="friends.css">
-    <link rel="icon" href="assets/logo.png" type="image/png">
+    <link rel="stylesheet" href="../friends/friends.css">
+    <link rel="icon" href="../../assets/logo.png" type="image/png">
 </head>
 <body>
     <aside>
@@ -21,7 +21,7 @@
                 <i class="icon_explore"></i>
                 Explore
             </a>
-            <a href="../notifications/notificaciones.html">
+            <a href="../notifications/notifications.html">
                 <i class="icon_notifications"></i>
                 Notifications
             </a>
@@ -30,46 +30,76 @@
                 Profile
             </a>
         </nav>
-        <a class="logout">
+        <a href="../index.html" class="logout">
             <i class="icon_logout"></i>
         </a>
     </aside>
-    <main>
-        HOLA
-        <div class="cherry_list">
-            <!-- Cherry Example Nº1 -->
-            <div class="cherry_container">
-                <span class="profile_photo">
-                    <i></i>
-                </span>
-                <div class="cherry_content">
-                    <p class="username">@username1</p>
-                    <div class="song">
-                        <h3>SONG - ARTIST</h3>
-                        <i></i>
+    <main>  
+        <div class="cards_container">
+            <button class="addfriends">
+                Add Friends
+                <i class="icon_addfriends"></i>
+            </button>  
+            <div class="card">
+                <div class="infocuenta">
+                    <div class="avatarMini"><img src="../../assets/perro_perfil.jpeg" alt="Foto Perfil"></div>
+                    <h3>saraaa</h3>
+                </div>
+                <a href="detailedSong.html">
+                <div class="contenedor" >
+                    <div class="controls">
+                        <div class="control-button"><img src="../../assets/like.png" alt="Liked"></div>
+                        <div class="control-button"><img src="../../assets/chat_bubble.png" alt="Comments"></div>
+                        <div class="control-button"><img src="../../assets/more_horiz.png" alt="Options"></div>
+                    </div>
+                    <img src="../../assets/chlorine.jpg" alt="Imagen de portada">
+                    <div class="song-bar">
+                        <span>Shameless - Camila Cabello</span>
+                        <div class="play-button"><img src="../../assets/play_arrow.png" alt="Play song"></div>
                     </div>
                 </div>
-                <div class="cherry_description">
-                    <h3>dfdsfsdfsd</h3>
-                </div>
+                <div class="chip">Felling: Stressed</div>
+                </a>
             </div>
-            <!-- Cherry Example Nº2 -->
-            <div class="cherry_container">
-                <span class="profile_photo">
-                    <i></i>
-                </span>
-                <div class="cherry_content">
-                    <p class="username">@username2</p>
-                    <div class="song">
-                        <h3>SONG - ARTIST</h3>
-                        <i></i>
+            <div class="card">
+                <div class="infocuenta">
+                    <div class="avatarMini"><img src="../../assets/chico_perfil.jpeg" alt="Foto Perfil"></div>
+                    <h3> _mikel044</h3>
+                </div>
+                <div class="contenedor">
+                    <div class="controls">
+                        <div class="control-button"><img src="../../assets/like.png" alt="Liked"></div>
+                        <div class="control-button"><img src="../../assets/chat_bubble.png" alt="Comments"></div>
+                        <div class="control-button"><img src="../../assets/more_horiz.png" alt="Options"></div>
+                    </div>
+                    <img src="../../assets/likeAPrayer.jpg" alt="Imagen de portada">
+                    <div class="song-bar">
+                        <span>Anxiety - Sleepy Hallow</span>
+                        <div class="play-button"><img src="../../assets/play_arrow.png" alt="Play song"></div>
                     </div>
                 </div>
-                <div class="cherry_description">
-                    <h3>dfdsfsdfsd</h3>
-                </div>
+                <div class="chip">Felling: Alive</div>
             </div>
-        </div>
+            <div class="card">
+                <div class="infocuenta">
+                    <div class="avatarMini"><img src="../../assets/chica_gafas_perfil.jpeg" alt="Foto Perfil"></div>
+                    <h3> pab_mks03</h3>
+                </div>
+                <div class="contenedor">
+                    <div class="controls">
+                        <div class="control-button"><img src="../../assets/like.png" alt="Liked"></div>
+                        <div class="control-button"><img src="../../assets/chat_bubble.png" alt="Comments"></div>
+                        <div class="control-button"><img src="../../assets/more_horiz.png" alt="Options"></div>
+                    </div>
+                    <img src="../../assets/onMelancholyHill.jpg" alt="Imagen de portada">
+                    <div class="song-bar">
+                        <span>Under the Influence - Chris Brown</span>
+                        <div class="play-button"><img src="../../assets/play_arrow.png" alt="Play song"></div>
+                    </div>
+                </div>
+                <div class="chip">Felling: Calm</div>
+            </div>
+        </div>     
     </main>
 </body>
 </html>
